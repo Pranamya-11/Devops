@@ -39,5 +39,14 @@ minikube service hello-k8s
 ## Expected Result
 The Nginx welcome page should open in the browser, and the Pod should reach the Running state.
 
+
 ## Screenshots
-See the `screenshots/` folder for execution evidence.
+
+### 1. Minikube Cluster Started
+[View Screenshot](Screenshots/cluster-start.png)
+
+### 2. Nginx Output
+[View Screenshot](Screenshots/nginx-output.png)
+
+### 3. Pod Running and Service
+[View Screenshot](Screenshots/pod-running-service.png)
