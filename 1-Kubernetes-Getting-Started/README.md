@@ -41,3 +41,6 @@ The Nginx welcome page should open in the browser, and the Pod should reach the 
 
 ## Screenshots
 See the `screenshots/` folder for execution evidence.
+## Screenshot
+
+![Nginx Kubernetes Pod](screenshots/nginx-pod.png)
