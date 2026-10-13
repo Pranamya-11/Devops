@@ -1,0 +1,41 @@
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout / Workspace') {
+            steps {
+                echo 'Starting Real-Time Operations Monitoring pipeline'
+                echo 'Using the Jenkins workspace'
+            }
+        }
+
+        stage('Validate Project Files') {
+            steps {
+                sh '''
+                    test -f delivery_metrics.py
+                    test -f prometheus.yml
+                    test -f alert_rules.yml
+                    test -f Dockerfile
+                    echo "All required project files are present."
+                '''
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                echo 'Docker image was tested successfully outside Jenkins.'
+                echo 'Docker build integration will be enabled after configuring Docker access for Jenkins.'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Monitoring pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Check the console output.'
+        }
+    }
+}
